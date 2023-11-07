@@ -1,0 +1,503 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-image: url('images/let.jpg'); */
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: rgb(46, 101, 110);
+
+}
+
+.logo {
+    position: absolute;
+    right: 1370px;
+    padding: 10px; 
+    margin-top: 0; 
+}
+
+img {
+    width: 100%;
+}
+
+.navigation {
+    position: absolute;
+    right: 100px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500px;
+    margin-left: 30px;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border: 1px solid white; 
+    border-radius: 5px;
+    background: white;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 20px;
+    cursor: pointer;
+    background: transparent;
+    font-weight: 500;
+    outline: none;
+    color: white;
+    transition: 3s;
+}
+
+ .btnLogin-popup:hover {
+    background: #fff;
+    color: red;
+    font-size: 16px;
+}
+
+#btnLogin-popup:hover {
+    transform: scaleX(0);
+}
+
+#btnLogin-popup:hover::after {
+    transform: scaleX(0);
+}
+
+
+.btnRegister-popup{
+    width: 130px;
+    height: 50px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 20px;
+    cursor: pointer;
+    background: transparent;
+    font-weight: 500;
+    outline: none;
+    color: white;
+    transition: 3s;
+}
+
+.btnRegister-popup:hover {
+    background: #fff;
+    color: blue;
+    font-size: 16px;
+}
+
+#btnRegister-popup:hover {
+    transform: scaleX(0);
+}
+
+#btnRegister-popup:hover::after {
+    transform: scaleX(0);
+}
+
+.btnjoinus-popup {
+    width: 130px;
+    height: 50px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 20px;
+    cursor: pointer;
+    background: transparent;
+    font-weight: 500;
+    outline: none;
+    color: white;
+    transition: 3s;
+}
+
+
+#btnjoinus-popup {
+    color: #fec107;
+    text-decoration: none;
+}
+
+
+#btnjoinus-popup:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   
+    transition: transform .5s ease, height .2s ease;
+}
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: #fff;
+}
+
+
+.icon-close {
+    position: absolute;
+    top: 0;
+    right: 0.3%;
+    background: rgb(46, 101, 110);
+    padding: 13px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    backdrop-filter: blur(20px);
+    border: transparent;
+    outline: transparent;
+    font-size: 1.6em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-close:hover {
+    color: white;
+    background: #230f0f;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50;
+    border-bottom: 2px solid #230f0f;
+    margin: 30px 0;
+    padding-bottom: 25px;
+
+
+}
+
+
+.input-box label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+
+}
+
+
+.input-box input {
+    position: relative;
+    bottom: 0;
+    top: 15px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    font-weight: 600;
+    color: black;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #230f0f;
+    line-height: 57px;
+
+}
+
+.remember-forgot {
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+   accent-color: #d69a9a;
+   margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: red;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: rgb(46, 101, 110);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: #fff;
+    border: 2px solid;
+}
+
+.login-register {
+    font-size: 17px;
+    columns: #ccc;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+    color: black;
+}
+
+
+/*  Form page */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+   
+    box-sizing: border-box;
+    font-family: 'poppins' sans-serif;
+}
+
+body {
+    /* background: rgb(46, 101, 110); */
+    padding: 0 10px;
+}
+
+.wrap-form {
+    max-width: 800px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(35, 35, 35, 0.305);
+    position: relative;
+    margin-top: 130px;
+}
+
+.wrap-form .title-form-reg {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: rgb(46, 101, 110);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrap-form .form {
+    width: 100%;
+}
+
+.wrap-form .form .input_field {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrap-form .form .input_field label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+
+.wrap-form .form .input_field .input,
+.wrap-form .form .input_field .textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+.wrap-form .form .input_field .textarea {
+    resize: none;
+    height: 125px;
+}
+
+
+.wrap-form .form .input_field .custom_select {
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.wrap-form .form .input_field .custom_select select{
+-webkit-appearance: none;
+appearance: none;
+border: 1px solid #d5dbd9;
+width: 100%;
+height: 100%;
+padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+
+}
+
+.wrap-form .form .input_field .custom_select:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+
+}
+
+.wrap-form .form .input_field .input:focus,
+.wrap-form .form .input_field .textarea:focus,
+.wrap-form .form .input_field .select:focus {
+    border: 1px solid #fec107;
+}
+
+
+
+.wrap-form .form .input_field p {
+    font-size: 14px;
+    color: #757575;
+}
+
+
+.wrap-form .form .input_field .check {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+
+.wrap-form .form .input_field .check input[type="checkmark"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+ }
+
+
+.wrap-form .form .input_field .btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: rgb(46, 101, 110);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+     
+}
+
+
+
+
+.wrap-form .form .input_field .btn:hover {
+    background: green;
+}
+
+
+.icon-close-reg {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgb(46, 101, 110);
+    color: white;
+    font-size: 1.6em;
+    border: transparent;
+    outline: transparent;
+    border-radius: 5px;
+    padding: 13px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.icon-close-reg:hover {
+    background: red;
+    color: #fff;
+}
+
+
+
